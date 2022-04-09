@@ -1,22 +1,31 @@
-body {
-    font-family: url (<enlace rel="preconectar" href="https://fonts.googleapis.com">
-    <enlace rel="preconectar" href="https://fonts.gstatic.com" crossorigin>
-    <enlace href="https: //fonts.googleapis.com/css2? familia = Cinzel: peso @ 600 &family= UnifrakturCook:wght@700 & display=swap" rel="stylesheet">) ;
+/* comenzamos dando caracteristicas a nuestro body para dar 
+el estilo a toda nuestra interfas web*/
+body { 
+    /*el tipo de fuente para nuestro texto*/
+    font-family:
+     url(
+         <enlace rel="preconectar" href="https://fonts.googleapis.com">
+         <enlace rel="preconectar" href="https://fonts.gstatic.com" crossorigin>
+         <enlace href="https: //fonts.googleapis.com/css2? familia = Cinzel: peso @ 600 &family=UnifrakturCook:wght@700 & display=swap" rel="stylesheet">) ;
+   /*ajustar nuestros margenes*/
     margin: 0;
+   /*eligimos una imagen de fondo para nuestra pagina */
    background: url(img.fondo.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-}
+   /*ajustamos el tamaño de la img de fondo*/
+    background-size:cover; 
+   /*dejamos la img de fondo fija para que no se mueva*/
+   background-attachment: fixed;
+  }
+  /*para trabajar las mediada tanto de margenes y bordes 
+  se aplica esta caracteristica para que se tenga en cuanta tales dimenciones */
 * {
     box-sizing: border-box;
 }
+  /*estilos para el menu de navegacion*/
 .menu{
-    list-style: none;
-    padding: 0;
+    padding: 0%;
     background: #B383BE;
     width: 90%;
-    max-width: 1000px;
- 
     margin: auto;
 }
 .menu li a{
