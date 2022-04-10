@@ -82,6 +82,7 @@ ol {
     border: solid;
     margin-left: 10%;
     min-width: 400px;
+    height: 1000px;
 }
 #contlogo{
     width: 25%;
