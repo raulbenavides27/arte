@@ -1,48 +1,116 @@
 /* comenzamos dando caracteristicas a nuestro body para dar 
 el estilo a toda nuestra interfas web*/
-body { 
+body {
     /*el tipo de fuente para nuestro texto*/
     font-family:
-     url(
-         <enlace rel="preconectar" href="https://fonts.googleapis.com">
-         <enlace rel="preconectar" href="https://fonts.gstatic.com" crossorigin>
-         <enlace href="https: //fonts.googleapis.com/css2? familia = Cinzel: peso @ 600 &family=UnifrakturCook:wght@700 & display=swap" rel="stylesheet">) ;
-   /*ajustar nuestros margenes*/
-    margin: 0;
-   /*eligimos una imagen de fondo para nuestra pagina */
-   background: url(img.fondo.jpg);
-   /*ajustamos el tamaño de la img de fondo*/
-    background-size:cover; 
-   /*dejamos la img de fondo fija para que no se mueva*/
-   background-attachment: fixed;
-  }
-  /*para trabajar las mediada tanto de margenes y bordes 
+        url(<enlace rel="preconectar" href="https://fonts.googleapis.com">
+ <enlace rel="preconectar"href="https://fonts.gstatic.com"crossorigin> <enlace href="https: //fonts.googleapis.com/css2? familia = Cinzel: peso @ 600 &family=UnifrakturCook:wght@700 & display=swap"rel="stylesheet">);
+    /*ajustar nuestros margenes*/
+
+    /*eligimos una imagen de fondo para nuestra pagina */
+    background: url(img.fondo.jpg);
+    /*ajustamos el tamaño de la img de fondo*/
+    background-size: cover;
+    /*dejamos la img de fondo fija para que no se mueva*/
+    background-attachment: fixed;
+}
+/*para trabajar las mediada tanto de margenes y bordes 
   se aplica esta caracteristica para que se tenga en cuanta tales dimenciones */
 * {
-    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
 }
-  /*estilos para el menu de navegacion*/
-.menu{
-    padding: 0%;
-    background: #B383BE;
-    width: 90%;
+#header {
+    border: solid;
+}
+#contmenu {
     margin: auto;
+    margin-top: 10px;
+    margin-left: 10%;
+    width: 50%;
+    height: 40px;
+    min-width: 380px;
+    
 }
-.menu li a{
+.iconos{
+    float: right;
+    width: 20%;
+}
+.iconos img{
+    border: solid;
+    width: 30px;
+}
+
+.menu li a {
+    
+    background-color: rgb(203, 169, 211);
     text-decoration: none;
-    color: rgb(48, 2, 54);
-    padding: 20px;
+    color: rgb(53, 51, 51);
+    padding: 10px 15px;
+    display:block;
+   
+    
+}
+.menu >li{
+  
+    margin: auto;
+    width: 25%;
+    height: 40px;
+    float:left ;
+}
+.menu li a:hover {
+    background-color: rgb(224, 201, 247);
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.menu li ul {
+    display: none;
+    position: absolute;
+}
+
+.menu li:hover>ul {
     display: block;
 }
-
-.menu li{
-    display: inline-block;
-    text-align: center;
+#general {
+    margin: auto;
+    margin-top: 10px;
+    width: 70%;
+    border: solid;
+    margin-left: 10%;
+    min-width: 400px;
+}
+#contlogo{
+    width: 25%;
+    float: left;
+    padding: 20px;
+    padding-top: 10px;;
 }
 
-.menu li a:hover{
-    background: #CAA8D1;
+.logo { 
+    border: solid;
+    margin-top: 10px;
+  
 }
+.logo img{ 
+    
+    width: 100%;
+    height: 100%;
+}
+ p{
+     padding: 20px;
+     padding-right: 40px;
+ }
+
+
+
+
+/*estilos para el menu de navegacion*/
+
+/*
 .contenedor{
     width: 100%;
     padding: 15px;
@@ -106,36 +174,8 @@ p{
         border-radius: 2%;
     }
 }
-.logo img{ 
-    width: 45%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*/
