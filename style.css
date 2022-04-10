@@ -21,13 +21,31 @@ body {
     padding: 0px;
 }
 #header {
+    background-color: rgb(203, 169, 211);
     border: solid;
+    height: 400px;
+}
+#contlogo{
+    padding-top: -50px;
+    
+    margin: auto;
+    width: 25%;
+}
+
+.logo { 
+    border: solid;
+    margin-top: 10px;
+  
+}
+.logo img{ 
+    
+    width: 100%;
+    height: 100%;
 }
 #contmenu {
+   
     margin: auto;
-    margin-top: 10px;
-    margin-left: 10%;
-    width: 50%;
+    width: 100%;
     height: 40px;
     min-width: 380px;
     
@@ -39,6 +57,11 @@ body {
 .iconos img{
     border: solid;
     width: 30px;
+}
+.menu{
+    margin: auto;
+ width: 50%;
+
 }
 
 .menu li a {
@@ -84,23 +107,7 @@ ol {
     min-width: 400px;
     height: 1000px;
 }
-#contlogo{
-    width: 25%;
-    float: left;
-    padding: 20px;
-    padding-top: 10px;;
-}
 
-.logo { 
-    border: solid;
-    margin-top: 10px;
-  
-}
-.logo img{ 
-    
-    width: 100%;
-    height: 100%;
-}
  p{
      padding: 20px;
      padding-right: 40px;
@@ -110,8 +117,8 @@ ol {
 
 
 /*estilos para el menu de navegacion*/
-
 /*
+
 .contenedor{
     width: 100%;
     padding: 15px;
