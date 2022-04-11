@@ -8,7 +8,9 @@ body {
     /*ajustar nuestros margenes*/
 
     /*eligimos una imagen de fondo para nuestra pagina */
-    background: url(img.fondo.jpg);
+    background-color: rgb(71,25,61);
+    /*background: 
+    url(img.fondo.jpg);*/
     /*ajustamos el tamaño de la img de fondo*/
     background-size: cover;
     /*dejamos la img de fondo fija para que no se mueva*/
@@ -21,7 +23,7 @@ body {
     padding: 0px;
 }
 #header {
-    background-color: rgb(203, 169, 211);
+    background-color: rgb(71,25,61);
     border: solid;
     height: 400px;
 }
@@ -66,9 +68,9 @@ body {
 
 .menu li a {
     
-    background-color: rgb(203, 169, 211);
+    background-color: rgb(71,25,61);
     text-decoration: none;
-    color: rgb(53, 51, 51);
+    color: rgb(210,173,201);
     padding: 10px 15px;
     display:block;
    
@@ -82,7 +84,7 @@ body {
     float:left ;
 }
 .menu li a:hover {
-    background-color: rgb(224, 201, 247);
+    background-color: rgb(139,65,122);
 }
 
 ul,
@@ -113,8 +115,10 @@ ol {
      padding-right: 40px;
  }
 
-
-
+.cuadro img {
+    width: auto;
+    margin: auto;
+}
 
 /*estilos para el menu de navegacion*/
 /*
