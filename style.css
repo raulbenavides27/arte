@@ -1,14 +1,10 @@
 /* comenzamos dando caracteristicas a nuestro body para dar 
 el estilo a toda nuestra interfas web*/
 body {
-    /*el tipo de fuente para nuestro texto*/
-    font-family:
-        url(<enlace rel="preconectar" href="https://fonts.googleapis.com">
- <enlace rel="preconectar"href="https://fonts.gstatic.com"crossorigin> <enlace href="https: //fonts.googleapis.com/css2? familia = Cinzel: peso @ 600 &family=UnifrakturCook:wght@700 & display=swap"rel="stylesheet">);
+    font-family: url (<enlace rel="preconectar"href="https://fonts.googleapis.com"> <enlace rel="preconectar"href="https://fonts.gstatic.com"crossorigin> <enlace href="https: //fonts.googleapis.com/css2? familia = Cinzel: peso @ 600 &family= UnifrakturCook:wght@700 & display=swap"rel="stylesheet">);
     /*ajustar nuestros margenes*/
-
     /*eligimos una imagen de fondo para nuestra pagina */
-    background-color: rgb(71,25,61);
+    background-color: rgb(176, 111, 161);
     /*background: 
     url(img.fondo.jpg);*/
     /*ajustamos el tamaño de la img de fondo*/
@@ -23,77 +19,61 @@ body {
     padding: 0px;
 }
 #header {
-    background-color: rgb(71,25,61);
-    border: solid;
+    background-color: rgb(71, 25, 61);
     height: 400px;
 }
-#contlogo{
+#contlogo {
     margin: auto;
     width: 20%;
 }
-
-.logo { 
-    
+.logo {
     margin-top: 10px;
-  
 }
-.logo img{ 
-    
+.logo img {
     width: 100%;
     height: 100%;
 }
 #contmenu {
-   
     margin: auto;
     width: 100%;
     height: 40px;
     min-width: 380px;
-    
 }
-.iconos{
+.iconos {
     float: right;
     width: 20%;
 }
-.iconos img{
+.iconos img {
     width: 30px;
 }
-.menu{
+.menu {
     margin: auto;
- width: 50%;
-
+    width: 50%;
 }
-
 .menu li a {
-    
-    background-color: rgb(71,25,61);
+    background-color: rgb(71, 25, 61);
     text-decoration: none;
-    color: rgb(210,173,201);
+    color: rgb(210, 173, 201);
     padding: 10px 15px;
-    display:block;
-   
-    
+    display: block;
 }
-.menu >li{
-  
+.menu>li {
     margin: auto;
     width: 25%;
     height: 40px;
-    float:left ;
+    float: left;
 }
 .menu li a:hover {
-    background-color: rgb(139,65,122);
+    background-color: rgb(139, 65, 122);
 }
-
 ul,
 ol {
     list-style: none;
 }
-
 .menu li ul {
     display: none;
     position: absolute;
 }
-
 .menu li:hover>ul {
     display: block;
 }
@@ -102,94 +82,28 @@ ol {
     margin-top: 10px;
     width: 70%;
     border: solid;
-    margin-left: 15%;
     min-width: 400px;
-    height: 1200px;
+    height: 1000px;
+    padding: 20px;
 }
-
- p{
-     padding: 20px;
-     padding-right: 40px;
- }
-
-.cuadro { 
-    margin: auto; 
-    border: solid;
+h1 h2{
+    margin: auto;
+}
+p {
+    margin: auto;
+    width: 80%;
+    padding: 20px;
+    padding-right: 40px;
+}
+.cuadro {
+    margin: auto;
     width: 80%;
     padding: 20px;
 }
-.cuadro img{ 
+
+.cuadro img {
     width: 100%;
 }
-
-/*estilos para el menu de navegacion*/
-/*
-
-.contenedor{
-    width: 100%;
-    padding: 15px;
+.contenido{
+    padding: 40px;
 }
-.formulario{
-    background: #fff;
-    margin-top: 150px;
-    padding: 3px;
-}
-h1{
-    text-align: center;
-    color: #662d89;
-    font-size: 40px;
-}
-input[type="text"],
-input[type="password"]{
-    font-size: 20px;
-    width: 82%;
-    padding: 10px;
-    border: none;
-}
-.input-contenedor{
-    margin-bottom: 15px;
-    border: 1px solid gray;
-}
-.icon{
-    min-width: 50px;
-    text-align: center;
-    color: #999;
-}
-.button{
-    border: none;
-    width: 100%;
-    color: white;
-    font-size: 20px;
-    background:  #662d89;
-    padding: 15px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.button:hover{
-    background: rgb(169, 113, 218);
-}
-p{
-    text-align: center;
-}
-.link{
-    text-decoration: none;
-      color: #662d89;
-    font-weight: 600;
-}
-.link:hover{
-     color: rgb(169, 113, 218);
-}
-@media(min-width:768px)
-{
-    .formulario{
-        margin: auto;
-        width: 500px;
-        margin-top: 150px;
-        border-radius: 2%;
-    }
-}
-
-
-
-
-*/
