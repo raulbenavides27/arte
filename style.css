@@ -28,14 +28,12 @@ body {
     height: 400px;
 }
 #contlogo{
-
-    
     margin: auto;
     width: 20%;
 }
 
 .logo { 
-    border: solid;
+    
     margin-top: 10px;
   
 }
@@ -57,7 +55,6 @@ body {
     width: 20%;
 }
 .iconos img{
-    border: solid;
     width: 30px;
 }
 .menu{
@@ -105,9 +102,9 @@ ol {
     margin-top: 10px;
     width: 70%;
     border: solid;
-    margin-left: 10%;
+    margin-left: 15%;
     min-width: 400px;
-    height: 1000px;
+    height: 1200px;
 }
 
  p{
@@ -115,9 +112,14 @@ ol {
      padding-right: 40px;
  }
 
-.cuadro img {
-    width: auto;
-    margin: auto;
+.cuadro { 
+    margin: auto; 
+    border: solid;
+    width: 80%;
+    padding: 20px;
+}
+.cuadro img{ 
+    width: 100%;
 }
 
 /*estilos para el menu de navegacion*/
