@@ -79,6 +79,37 @@ ol {
     display: block;
 }
 
+#general {
+    background-color: rgb(252, 244, 253,0.6);
+    margin: auto;
+    margin-top: 10px;
+    width: 70%;
+    min-width: 400px;
+    height: 1200px;
+    padding: 20px;
+}
+h1 h2{
+    margin: auto;
+}
+p {
+    margin: auto;
+    width: 80%;
+    padding: 20px;
+    padding-right: 40px;
+}
+.cuadro {
+    margin: auto;
+    width: 80%;
+    padding: 20px;
+}
+
+.cuadro img {
+    width: 100%;
+}
+.contenido{
+    padding: 40px;
+}
+
 /* contenido para img en el contenedor de todo lo demas*/
 /* contenedor del cuadro para una imagen */
 .cuadro {
