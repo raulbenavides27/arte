@@ -1,3 +1,61 @@
+
+#header {
+    width: auto;
+    height: 400px;  
+}
+#contlogo {
+    margin: auto;
+    width: 20%;
+}
+.logo {
+    margin-top: 10px;
+}
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+#contmenu {
+    margin: auto;
+    width: 100%;
+    height: 40px;
+    min-width: 380px;
+}
+.iconos {
+    padding: 2%;
+}
+.iconos img {
+    width: 30px;
+}
+#general {
+    background-color: rgb(245, 225, 225,0.5);
+    margin: auto;
+    width: 70%;
+    min-width: 400px;
+    height: 1200px;
+    padding: 20px;
+}
+h1 h2{
+    margin: auto;
+}
+p {
+    margin: auto;
+    width: 80%;
+    padding: 20px;
+    padding-right: 40px;
+}
+.cuadro {
+    margin: auto;
+    width: 80%;
+    padding: 20px;
+}
+
+.cuadro img {
+    width: 100%;
+}
+.contenido{
+    padding: 40px;
+}
+
 *{
     margin: 0;
     padding: 0;
