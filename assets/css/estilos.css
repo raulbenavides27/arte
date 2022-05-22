@@ -26,13 +26,9 @@
 .iconos img {
     width: 30px;
 }
-#general {
+.container{
     background-color: rgb(245, 225, 225,0.7);
-    margin: auto;
-    width: 70%;
-    min-width: 400px;
-    height: 1200px;
-    padding: 20px;
+   
 }
 h1 h2{
     margin: auto;
