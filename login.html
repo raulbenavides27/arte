@@ -1,52 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Inicio de Sesion y Registro </title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/estilos.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-        <main>
-            <div class="contenedor__todo">
-                <div class="caja__trasera">
-                    <div class="caja__trasera-login">
-                        <h3>¿Ya tienes una cuenta?</h3>
-                        <p>Inicia sesión para entrar en la página</p>
-                        <button id="btn__iniciar-sesion">Iniciar Sesión</button>
-                    </div>
-                    <div class="caja__trasera-register">
-                        <h3>¿Aún no tienes una cuenta?</h3>
-                        <p>Regístrate para que puedas iniciar sesión</p>
-                        <button id="btn__registrarse">Regístrarse</button>
-                    </div>
+    <div class="cod-container">
+        <div class="form-header">
+            <img src="img/Logo.png">
+            <h1><span>Arte</span></h1>
+        </div>
+
+        <div class="form-content">
+            <form action="#" class="cod-form">
+                <div class="form-title">
+                    <h2>Iniciar Sesión</h2>
                 </div>
 
-                <!--Formulario de Login y registro-->
-                <div class="contenedor__login-register">
-                    <!--Login-->
-                    <form action="" class="formulario__login">
-                        <h2>Iniciar Sesión</h2>
-                        <input type="text" placeholder="Correo Electronico">
-                        <input type="password" placeholder="Contraseña">
-                        <button>Entrar</button>
-                    </form>
-
-                    <!--Register-->
-                    <form action="" class="formulario__register">
-                        <h2>Regístrarse</h2>
-                        <input type="text" placeholder="Nombre completo">
-                        <input type="text" placeholder="Correo Electronico">
-                        <input type="text" placeholder="Usuario">
-                        <input type="password" placeholder="Contraseña">
-                        <button>Regístrarse</button>
-                    </form>
+                <div class="input-group">
+                    <input type="email" class="form-input" name="form-input" id="correo">
+                    <label class="label" for="correo">Correo</label>
                 </div>
-            </div>
 
-        </main>
+                <div class="input-group">
+                    <input type="password" class="form-input" name="form-input" id="pass">
+                    <label class="label" for="pass">Contraseña</label>
+                </div>
 
-        <script src="assets/js/script.js"></script>
+                <div class="input-group">
+                    <input type="submit" class="form-input" value="Iniciar Sesión">
+                    <p>No tienes cuenta? <a href="#" class="alt-form">Ingresa aquí</a></p>
+                </div>
+               
+            </form>
+        </div>
+
+        
+        <div class="form-content">
+            <form action="#" class="cod-form">
+                <div class="form-title">
+                    <h2>Regístrate</h2>
+                </div>
+
+                <div class="input-group">
+                    <input type="email" class="form-input" name="form-input" id="reg-correo">
+                    <label class="label" for="reg-correo">Correo</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" class="form-input" name="form-input" id="reg-pass">
+                    <label class="label" for="reg-pass">Contraseña</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" class="form-input" name="form-input" id="reg-rep-pass">
+                    <label class="label" for="reg-rep-pass">Repetir Contraseña</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="submit" class="form-input" value="Registrate">
+                    <p>Ya tienes cuenta? <a href="#" class="alt-form">Ingresa aquí</a></p>
+                </div>
+               
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+  </script>
 </body>
 </html>

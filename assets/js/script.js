@@ -16,7 +16,7 @@ function anchoPage(){
 
     if (window.innerWidth > 850){
         caja_trasera_register.style.display = "block";
-        caja_trasera_login.style.display = "block";
+        caja_trasera_login.style.display = "block"; 
     }else{
         caja_trasera_register.style.display = "block";
         caja_trasera_register.style.opacity = "1";
