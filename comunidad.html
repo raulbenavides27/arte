@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Inicio</title>
+  <title>Usuario</title>
   <link rel="stylesheet" type="text/css" href="assets/css/estilos.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -14,8 +14,8 @@
 
   <nav id="cajausuario" class="navbar navbar-expand-lg bg-light">
     <div id="contlogo">
-      <div class="logo">
-        <img src="assets/images/logo2.png" alt="logo">
+      <div class="logo"><a href="index.html">
+          <img src="assets/images/logo2.png" alt="logo"> </a>
       </div>
     </div>
     <div class="container-fluid">
@@ -38,7 +38,7 @@
               Comunidad
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="login.html">Usuarios</a></li>
+              <li><a class="dropdown-item" href="comunidad.html">Usuarios</a></li>
               <li><a class="dropdown-item" href="#">comparte</a></li>
               <li><a class="dropdown-item" href="#">Comenta</a></li>
             </ul>
@@ -49,7 +49,7 @@
           <button class="btn btn-outline-success" type="submit">Buscar</button>
         </form>
         <div class="iconos">
-          <a href="login.html"><img src="assets/images/icon.png" alt="logo login"></a>
+          <a href="comunidad.html"><img src="assets/images/icon.png" alt="logo login"></a>
         </div>
         <div class="iconos">
           <a href="https://www.facebook.com/"><img src="assets/images/face-removebg.png" alt="face"></a>
@@ -69,7 +69,7 @@
         <img class="rounded mx-auto d-block p-5" src="assets/images/logo.png">
       </div>
       <div class="col p-5 " id="cont_login">
-       
+
         <h3 class="fe-bold text-center py-5">Iniciar Sesión</h3>
         <form action="#" class="cod-form">
           <div class="mb-4">
@@ -81,7 +81,7 @@
             <input type="password" class="form-control" name="pass" id="pass" placeholder="Contraseña" required>
           </div>
           <div class="d-grid">
-          <button type="submit" class="btn btn-primary" id="btn-iniciar">Iniciar Sesión</button>
+            <button type="submit" class="btn btn-primary" id="btn-iniciar">Iniciar Sesión</button>
           </div>
 
           <p>No tienes cuenta? <a href="#" class="form-check text-decoration-none" id="link_registro">Registrate</a></p>
@@ -89,7 +89,7 @@
       </div>
       <div class="col p-5 " id="cont_registro">
         <h3 class="fe-bold text-center py-5">Registrate</h3>
-        <form action="#" class="cod-form"> 
+        <form action="#" class="cod-form">
           <div class="mb-4">
             <label for="nombre" class="form-label">Nombre</label>
             <input type="text" class="form-control" name="nombre" placeholder="Nombre" required>
@@ -101,19 +101,21 @@
           <div class="mb-4">
             <label class="form-label" for="pass">Contraseña</label>
             <input type="password" required class="form-control" name="pass" id="reg-pass" placeholder="Contraseña">
-           
+
           </div>
 
           <div class="mb-4">
             <label class="form-label" for="rep-pass">Repetir Contraseña</label>
-            <input type="password" class="form-control" name="rep-pass" id="rep-pass" placeholder="Repite tu contraseña" required>
-           
+            <input type="password" class="form-control" name="rep-pass" id="rep-pass" placeholder="Repite tu contraseña"
+              required>
+
           </div>
 
           <div class="d-grid">
             <button type="submit" class="btn btn-primary">Registrate</button>
-            </div>
-          <p>Ya tienes cuenta? <a href="#" class="form-check text-decoration-none" id="link_login">Inicia Sessión</a></p>
+          </div>
+          <p>Ya tienes cuenta? <a href="#" class="form-check text-decoration-none" id="link_login">Inicia Sessión</a>
+          </p>
         </form>
       </div>
     </div>
