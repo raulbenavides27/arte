@@ -3,15 +3,14 @@ $(document).ready(function(){
     $("#cont_registro").fadeOut();
 
     $("#link_registro").click(function(){
-        $("#cont_login").slideDown();
         $("#cont_login").fadeOut();
         $("#cont_registro").fadein();
-        $("#cont_registro").slideUp();
+     
     })
     $("#link_login").click(function(){
-        $("#cont_login").slideUp();
+       
         $("#cont_login").fadeIn();
-        $("#cont_registro").slideDown();
+       
         $("#cont_registro").fadeOut();
     })
 
@@ -24,3 +23,7 @@ $("#cont_img").mouseenter(function(){
 
 
 })
+//$("#cont_registro").slideUp();
+//$("#cont_login").slideDown();
+//$("#cont_login").slideUp();
+//$("#cont_registro").slideDown();
