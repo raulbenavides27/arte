@@ -6,7 +6,9 @@ const cargarImagen = (entradas,observador) => {
     
     entradas.forEach((entrada) => {
         if(entrada.isIntersecting){
-            console.log('la imagen esta en el viewport')
+            entrada.target.classList.add('visible'); 
+        }else{
+            entrada.target.classList.remove('visible'); 
         }
     });
 }
