@@ -23,13 +23,13 @@ $("#detalle_img2").hide();
 $("#detalle_img3").hide();
 $("#detalle_img4").hide();
 $("#detalle_img5").hide();
+
 $("#cont_img").mouseleave(function(){
     $("#detalle_img").slideUp();
 })
 $("#cont_img").mouseenter(function(){
     $("#detalle_img").slideDown();
 })
-
 $("#cont_img1").mouseleave(function(){
     $("#detalle_img1").slideUp();
 })
