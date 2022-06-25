@@ -1,66 +1,7 @@
-<!doctype html>
-<html lang="en">
+{% extends 'arte_todo/base.html' %}
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Inicio</title>
-  <link rel="stylesheet" type="text/css" href="assets/css/estilos.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-</head>
-
-<body>
-
-  <nav class="navbar navbar-expand-lg bg-light">
-    <div id="contlogo">
-      <div class="logo"><a href="index.html">
-          <img src="assets/images/logo2.png" alt="logo">
-        </a>
-      </div>
-    </div>
-    <div class="container-fluid p-5">
-      <a class="navbar-brand" href="index.html">Inicio</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="galeria.html">Galeria</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contacto.html">Contacto</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Comunidad
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="comunidad.html">Usuarios</a></li>
-              <li><a class="dropdown-item" href="#">comparte</a></li>
-              <li><a class="dropdown-item" href="#">Comenta</a></li>
-            </ul>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Buscar</button>
-        </form>
-        <div class="iconos">
-          <a href="comunidad.html"><img src="assets/images/icon.png" alt="logo login"></a>
-        </div>
-        <div class="iconos">
-          <a href="https://www.facebook.com/"><img src="assets/images/face-removebg.png" alt="face"></a>
-        </div>
-        <div class="iconos">
-          <a href="https://www.instagram.com/"><img src="assets/images/instagram-removebg.png" alt="insta"></a>
-        </div>
-      </div>
-    </div>
-  </nav>
+{% block contenido %}
+{% load static %}
   <!--contenido debajo del menu-->
   <div class="container w-75 mt-3 rounded shadow"  >
     <div class="row align-items-stretch">
@@ -95,16 +36,9 @@
         <h6 class="text-md-end m-4"> Jhonandrew Rojas (Funcionalidades), contacto@grupo8.cl (02)23630654</h6>
       </div>
       <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6">
-        <img class="rounded mx-auto d-block p-5" src="assets/images/logo.png">
+        <img class="rounded mx-auto d-block p-5" src="{% static 'arte_todo/images/logo.png'%}">
       </div>
     </div>
   </div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
-  </script>
-</body>
-
-</html>
+  {% endblock %}
