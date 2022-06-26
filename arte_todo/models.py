@@ -14,7 +14,7 @@ class foto(models.Model):
         return self.nombre
 class contacto(models.Model):
     asunto = models.CharField(max_length=50)
-    correo = models.models.EmailField()
+    correo = models.EmailField()
     contacto= models.IntegerField()
     mensaje = models.TextField()
     estado= models.BooleanField()
