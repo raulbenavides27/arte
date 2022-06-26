@@ -1,69 +1,24 @@
 {% extends 'arte_todo/base.html' %}
-
 {% block contenido %}
 {% load static %}
-<div class="container w-75 mt-3 rounded shadow p-5">
 
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-          <div class="card" id="cont_img">
-            <img src="{% static 'arte_todo/images/galeria1.jpg'%}" class="card-img-top" alt="galeria1">
+<div class="container w-75 mt-3 rounded shadow p-5">
+  {% for p in foto %} 
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="card" id="cont_img">
+            <img src="{{p.imagen.url}}" class="card-img-top" alt="galeria">
             <div class="card-body" id="detalle_img">
-              <h6 class="card-title">la ilusión del deseo</h6>
-              <p class="card-text">“pintado por emilio villalba”</p>
+              <h6 class="card-title">{{ p.nombre | capfirst }}</h6>
+              <p class="card-text">{{ p.descripcion }}</p>
+              <h6>{{p.fecha}}</h6>
             </div>
-          </div>
+          </div> 
         </div>
-        <div class="col">
-          <div class="card" id="cont_img1">
-            <img src="{% static 'arte_todo/images/galeria2.jpg'%}" class="card-img-top" alt="galeria2">
-            <div class="card-body" id="detalle_img1">
-              <h6 class="card-title">Conversación entre la luna y una estrella</h6>
-              <p class="card-text">Por: Paul Rumsey Tipo: Ilustración De: Reino Unido Año: 2011</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card" id="cont_img2">
-            <img src="{% static 'arte_todo/images/galeria3.jpg'%}" class="card-img-top" alt="galeria3">
-            <div class="card-body" id="detalle_img2">
-              <h6 class="card-title">Imagen de hongo</h6>
-              <p class="card-text">un hongo de colecion, maravillas del mundo</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card" id="cont_img3">
-            <img src="{% static 'arte_todo/images/galeria4.jpg'%}" class="card-img-top" alt="galeria4">
-            <div class="card-body" id="detalle_img3">
-              <h6 class="card-title">imagen 4</h6>
-              <p class="card-text"> imgen 4 </p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card" id="cont_img4">
-            <img src="{% static 'arte_todo/images/galeria5.jpg'%}" class="card-img-top" alt="galeria5">
-            <div class="card-body" id="detalle_img4">
-              <h6 class="card-title">imagen 5</h6>
-              <p class="card-text">imagen 5 </p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card" id="cont_img5">
-            <img src="{% static 'arte_todo/images/galeria6.jpg'%}" class="card-img-top" alt="galeria6">
-            <div class="card-body" id="detalle_img5">
-              <h6 class="card-title">imagen 6</h6>
-              <p class="card-text">imagen 6 </p>
-            </div>
-          </div>
-        </div>
+   {% endfor %}
       </div>
-    </div>
-    {% block js %}
+ 
+{% block js %}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{% static 'arte_todo/js/form.js'%}"></script>
-    {% endblock js %}
-
-    {% endblock %} 
+{% endblock js %}
+{% endblock %} 
