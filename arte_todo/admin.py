@@ -1,6 +1,8 @@
 from django.contrib import admin
-from .models import foto, consulta
+
+from arte_todo.views import contacto
+from .models import foto, contacto
 
 # Register your models here.
 admin.site.register(foto)
-admin.site.register(consulta)
+admin.site.register(contacto)

@@ -1,4 +1,5 @@
 from distutils.command.upload import upload
+from pyexpat import model
 from turtle import update
 from django.db import models
 
@@ -11,10 +12,11 @@ class foto(models.Model):
      
     def __str__(self):
         return self.nombre
-class consulta(models.Model):
+class contacto(models.Model):
     asunto = models.CharField(max_length=50)
-    descripcion = models.TextField()
+    correo = models.models.EmailField()
     contacto= models.IntegerField()
+    mensaje = models.TextField()
     estado= models.BooleanField()
     
     def __str__(self):
