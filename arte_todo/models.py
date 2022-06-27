@@ -12,12 +12,12 @@ class foto(models.Model):
      
     def __str__(self):
         return self.nombre
-class contacto(models.Model):
+class consulta(models.Model):
     asunto = models.CharField(max_length=50)
     correo = models.EmailField()
     contacto= models.IntegerField()
     mensaje = models.TextField()
-    estado= models.BooleanField()
+    
     
     def __str__(self):
         return self.asunto 

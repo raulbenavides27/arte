@@ -8,26 +8,14 @@
      
       <div class="col p-5">
         <h3 class="fe-bold text-center py-5">Contáctanos</h3>
-        <form action="#">
-          <div class="mb-4">
-            <label for="Asunto" class="form-label">Asunto</label>
-            <input type="text" class="form-control" name="Asunto" placeholder="Asunto" required>
-          </div>
-          <div class="mb-4">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" name="email" placeholder="Email" required>
-          </div>
-          <div class="mb-4">
-            <label for="telefono" class="form-label">Teléfono(opcional)</label>
-            <input type="tel" class="form-control" name="telefono" placeholder="Teléfono">
-          </div>
-          <div class="mb-4">
-            <label for="mensaje" class="form-label">Mensaje</label>
-            <textarea typo="text" class="form-control" name="mensaje" placeholder="Mensaje" required rows="6"
-              cols="25"></textarea>
-          </div>
-          <div class="d-grid">
-            <button type="submit" class="btn btn-primary">Enviar</button>
+        <form action="" class="" method="post">
+          {% csrf_token %}
+    {{form}}
+    <br>
+    {{mensaje}}
+    <br>
+     <div class="d-grid">
+            <button type="submit" id="btnEnviar" class="btn btn-primary">Enviar</button>
           </div>
         </form>
 
