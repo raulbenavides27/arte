@@ -1,9 +1,9 @@
 {% extends 'arte_todo/base.html' %} {% block contenido %} {% load static %}
-
 <div class="container w-75 mt-3 rounded shadow p-5">
   {% for p in foto %}
   <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="card" id="cont_img">
+  <div class="col">
+    <div class="card"  id="cont_img">
       <img src="{{p.imagen.url}}" class="card-img-top" alt="galeria" />
       <div class="card-body" id="detalle_img">
         <h6 class="card-title">{{ p.nombre | capfirst }}</h6>
@@ -12,9 +12,14 @@
       </div>
     </div>
   </div>
-  {% endfor %}
 </div>
 {% block js %}
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="{% static 'arte_todo/js/form.js'%}"></script>
-{% endblock js %} {% endblock %}
+
+{% endblock js %}
+{% endfor %}
+</div>
+
+
+ {% endblock %}

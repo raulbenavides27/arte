@@ -1,4 +1,6 @@
-{% extends 'arte_todo/base.html' %} {% block contenido %} {% load static %}
+{% extends 'arte_todo/base.html' %}
+{% block contenido %}
+ {% load static %}
 <!--login dentro de comunidad-->
 <div class="container w-75 mt-3 rounded shadow">
   <div class="row align-items-stretch">
@@ -112,4 +114,5 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
 <script src="{% static 'arte_todo/js/form.js'%}"></script>
-{% endblock js%} {% endblock %}
+{% endblock js%}
+ {% endblock %}
