@@ -14,10 +14,10 @@ def contacto(request):
           formulario = consultaForm(data=request.POST)
           if formulario.is_valid():
               formulario.save()
-              data["mensaje"] = "mensaje guardado guardo"
+              data["mensaje"] = "mensaje enviado"
           else:
                data["form"] = formulario
-           
+               data["mensaje"] = "mensaje sin enviar"
            
      return render(request,'arte_todo/contacto.html', data)
 

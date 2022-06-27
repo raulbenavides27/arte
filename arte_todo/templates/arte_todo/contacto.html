@@ -1,31 +1,32 @@
 {% extends 'arte_todo/base.html' %}
 
 {% block contenido %}
+{% load crispy_forms_tags %}
 {% load static %}
   <!--contenido debajo del menu-->
   <div class="container w-75 mt-3 rounded shadow"  >
     <div class="row align-items-stretch">
-     
-      <div class="col p-5">
+      <div class="col-12 col-md-6 offset-md-3">
         <h3 class="fe-bold text-center py-5">Contáctanos</h3>
-        <form action="" class="" method="post">
+        <form action="" class="formulario contacto" method="post">
           {% csrf_token %}
-    {{form}}
+    {{form | crispy }}
     <br>
     {{mensaje}}
-    <br>
-     <div class="d-grid">
+   
+     <div class="d-flex juxtify-content-end">
+            <input type="reset" value="cancelar" class="btn btn-secondary">
+            &nbsp;
             <button type="submit" id="btnEnviar" class="btn btn-primary">Enviar</button>
           </div>
         </form>
-
+        <img class="rounded mx-auto d-block p-5" src="{% static 'arte_todo/images/logo.png'%}">
         <h6 class="text-md-end m-4"> Raul benavides (Lider de proyecto), contacto@grupo8.cl (02)23630654</h6>
         <h6 class="text-md-end m-4"> Ayelen Corrotea (Diseño y estetica), contacto@grupo8.cl (02)23630654</h6>
         <h6 class="text-md-end m-4"> Jhonandrew Rojas (Funcionalidades), contacto@grupo8.cl (02)23630654</h6>
       </div>
-      <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6">
-        <img class="rounded mx-auto d-block p-5" src="{% static 'arte_todo/images/logo.png'%}">
-      </div>
+     <!--<div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6">  
+      </div>--> 
     </div>
   </div>
   </div>

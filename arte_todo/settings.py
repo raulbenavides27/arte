@@ -40,7 +40,10 @@ INSTALLED_APPS = [
     'arte_todo',
     'corsheaders',
     'rest_framework',
+,
 ]
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
