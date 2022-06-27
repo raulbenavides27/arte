@@ -1,43 +1,32 @@
 {% extends 'arte_todo/base.html' %}
 
 {% block contenido %}
+{% load crispy_forms_tags %}
 {% load static %}
   <!--contenido debajo del menu-->
   <div class="container w-75 mt-3 rounded shadow"  >
     <div class="row align-items-stretch">
-     
-      <div class="col p-5">
+      <div class="col-12 col-md-6 offset-md-3">
         <h3 class="fe-bold text-center py-5">Contáctanos</h3>
-        <form action="#">
-          <div class="mb-4">
-            <label for="Asunto" class="form-label">Asunto</label>
-            <input type="text" class="form-control" name="Asunto" placeholder="Asunto" required>
-          </div>
-          <div class="mb-4">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" name="email" placeholder="Email" required>
-          </div>
-          <div class="mb-4">
-            <label for="telefono" class="form-label">Teléfono(opcional)</label>
-            <input type="tel" class="form-control" name="telefono" placeholder="Teléfono">
-          </div>
-          <div class="mb-4">
-            <label for="mensaje" class="form-label">Mensaje</label>
-            <textarea typo="text" class="form-control" name="mensaje" placeholder="Mensaje" required rows="6"
-              cols="25"></textarea>
-          </div>
-          <div class="d-grid">
-            <button type="submit" class="btn btn-primary">Enviar</button>
+        <form action="" class="formulario contacto" method="post">
+          {% csrf_token %}
+    {{form | crispy }}
+    <br>
+    {{mensaje}}
+   
+     <div class="d-flex juxtify-content-end">
+            <input type="reset" value="cancelar" class="btn btn-secondary">
+            &nbsp;
+            <button type="submit" id="btnEnviar" class="btn btn-primary">Enviar</button>
           </div>
         </form>
-
+        <img class="rounded mx-auto d-block p-5" src="{% static 'arte_todo/images/logo.png'%}">
         <h6 class="text-md-end m-4"> Raul benavides (Lider de proyecto), contacto@grupo8.cl (02)23630654</h6>
         <h6 class="text-md-end m-4"> Ayelen Corrotea (Diseño y estetica), contacto@grupo8.cl (02)23630654</h6>
         <h6 class="text-md-end m-4"> Jhonandrew Rojas (Funcionalidades), contacto@grupo8.cl (02)23630654</h6>
       </div>
-      <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6">
-        <img class="rounded mx-auto d-block p-5" src="{% static 'arte_todo/images/logo.png'%}">
-      </div>
+     <!--<div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6">  
+      </div>--> 
     </div>
   </div>
   </div>

@@ -17,7 +17,7 @@ class consulta(models.Model):
     correo = models.EmailField()
     contacto= models.IntegerField()
     mensaje = models.TextField()
-    estado= models.BooleanField()
+    
     
     def __str__(self):
         return self.asunto   

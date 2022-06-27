@@ -40,7 +40,10 @@ INSTALLED_APPS = [
     'arte_todo',
     'corsheaders',
     'rest_framework',
+    'crispy_forms',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
