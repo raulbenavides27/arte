@@ -49,7 +49,7 @@
         Fuente: https://concepto.de/arte/#ixzz7Q5d84LI6 </p>
 
       <!--detalles para scroll-->
-      <div class="contenedor2">
+<div class="contenedor2">
       <div class="">
         <img id="imagen1" src="{% static 'arte_todo/images/museo.jpg' %}" class="d-block w-100" alt="museo">
       </div>
@@ -64,7 +64,6 @@
         A lo largo de la historia, la palabra “arte” se ha ido expandiendo por todo el mundo en todas sus
         formas.
         Fuente: https://concepto.de/arte/#ixzz7Q5d84LI6 </p>
-
 
       <div class="">
         <img id="imagen2" src="{% static 'arte_todo/images/museo2.jpg'%}" class="d-block w-100  " alt="museo3">
@@ -96,14 +95,11 @@
         el arte es uno de los componentes más importantes de la cultura.
         A lo largo de la historia, la palabra “arte” se ha ido expandiendo por todo el mundo en todas sus
         formas.
-        Fuente: https://concepto.de/arte/#ixzz7Q5d84LI6 </p>
-      </div>
+        Fuente: https://concepto.de/arte/#ixzz7Q5d84LI6 
+      </p>
     </div>
-  </div>
-
-
+    </div>
+  {% block js %}
+  <script src={% static 'arte_todo/js/app.js'%}"></script>
+  {% endblock js %}
   {% endblock %}
-
-</body>
-
-</html>
