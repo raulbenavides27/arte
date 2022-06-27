@@ -20,5 +20,4 @@ class consulta(models.Model):
     
     
     def __str__(self):
-        return self.asunto 
-    
+        return self.asunto   
