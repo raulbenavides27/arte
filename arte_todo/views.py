@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import consulta, foto
-from .forms import consultaForm
+from .forms import consultaForm , fotoForm
 
 # Create your views here.
 def home(request):
@@ -29,6 +29,22 @@ data = {
 def galeria(request):
  
    return render(request,'arte_todo/galeria.html', data)
+
+def agregar(request):
+     data = {
+          'form':fotoForm
+     }
+     if request.method == 'POST':
+          formulario = fotoForm(data=request.POST,files=request.FILES)
+          if formulario.is_valid():
+              formulario.save()
+              data["mensaje"] = "guardado correctamente"
+          else:
+               data["form"] = formulario
+               
+     return render(request,'arte_todo/agregar.html', data)
+
     
 def comunidad(request):
      return render(request,'arte_todo/comunidad.html')
+
