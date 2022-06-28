@@ -8,5 +8,5 @@ tzdata==2022.
 pillow
 django-crispy-forms
 django-admin-interface
-..
-..
+
+
