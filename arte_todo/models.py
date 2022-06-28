@@ -8,7 +8,7 @@ class foto(models.Model):
     nombre = models.CharField(max_length=50)
     descripcion = models.TextField()
     fecha = models.DateField()
-    imagen = models.ImageField(upload_to="foto", null=True)
+    imagen = models.ImageField(upload_to="foto")
      
     def __str__(self):
         return self.nombre

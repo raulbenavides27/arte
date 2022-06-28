@@ -32,15 +32,16 @@ def galeria(request):
 
 def agregar(request):
      data = {
-          'form':fotoForm
+         'form':fotoForm
      }
+     
      if request.method == 'POST':
           formulario = fotoForm(data=request.POST,files=request.FILES)
           if formulario.is_valid():
-              formulario.save()
-              data["mensaje"] = "guardado correctamente"
+               formulario.save()
+               data["mensaje"] = "guardado correctamente"
           else:
-               data["form"] = formulario
+           data["form"] = formulario 
                
      return render(request,'arte_todo/agregar.html', data)
 
