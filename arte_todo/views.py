@@ -6,15 +6,20 @@ from .forms import consultaForm , fotoForm
 def home(request):
      return render(request,'arte_todo/home.html')
 
+def respuesta(request):
+     
+      return render(request,'arte_todo/respuesta.html')
+ 
 def contacto(request):
+     
      data = { 
              'form': consultaForm
      }
      if request.method == 'POST':
           formulario = consultaForm(data=request.POST)
           if formulario.is_valid():
-              formulario.save()
-              data["mensaje"] = "mensaje enviado"
+              formulario.save() 
+              return render(request,'arte_todo/respuesta.html') 
           else:
                data["form"] = formulario
                data["mensaje"] = "mensaje sin enviar"
@@ -39,7 +44,7 @@ def agregar(request):
           formulario = fotoForm(data=request.POST,files=request.FILES)
           if formulario.is_valid():
                formulario.save()
-               data["mensaje"] = "guardado correctamente"
+               return render(request,'arte_todo/respuesta.html')    
           else:
            data["form"] = formulario 
                

@@ -1,23 +1,22 @@
 {% extends 'arte_todo/base.html' %}
 
 {% block contenido %}
-{% load crispy_forms_tags %}
+
 {% load static %}
   <!--contenido debajo del menu-->
   <div class="container w-75 mt-3 rounded shadow"  >
     <div class="row align-items-stretch">
       <div class="col-12 col-md-6 offset-md-3">
         <h3 class="fe-bold text-center py-5">Contáctanos</h3>
-        <form action="" class="formulario contacto" method="post">
           <div class="card">
             <div class="card-body">
-          {% csrf_token %}
-    {{form | crispy }}
-    <br>
+            <h4> mensaje enviado, Gracias por contactanos</H4>
      <div class="d-flex juxtify-content-end">
-            <input type="reset" value="cancelar" class="btn btn-secondary">
+            <input type="submit" value="salir" class="btn btn-secondary">
             &nbsp;
-            <button type="submit" id="btnEnviar" class="btn btn-primary">Enviar</button>
+            <button type="submit" id="btnEnviar" class="btn btn-primary">
+              <a class="nav-link active" aria-current="page" href="{% url 'contacto' %}">Aceptar</a>
+            </button>
           </div>
         </div>
       </div>
