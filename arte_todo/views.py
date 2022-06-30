@@ -54,3 +54,9 @@ def agregar(request):
 def comunidad(request):
      return render(request,'arte_todo/comunidad.html')
 
+def editar(request):
+      return render(request,'arte_todo/editar.html')
+ 
+def eliminar(request):
+      return render(request,'arte_todo/eliminar.html')
+

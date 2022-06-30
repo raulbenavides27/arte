@@ -1,6 +1,6 @@
 
 from django.urls import path
-from .views import home, contacto, galeria, comunidad, agregar, respuesta
+from .views import home, contacto, galeria, comunidad, agregar, respuesta, editar, eliminar
 urlpatterns = [
     path('',home, name="home"),
     path('contacto/', contacto, name="contacto"),
@@ -8,6 +8,8 @@ urlpatterns = [
     path('comunidad/', comunidad, name="comunidad"),
     path('agregar/', agregar, name="agregar"),
     path('respuesta/', respuesta, name="respuesta"),
+    path('editar/', editar, name="editar"),
+    path('eliminar/', eliminar, name="eliminar"),
     
 
 ]
