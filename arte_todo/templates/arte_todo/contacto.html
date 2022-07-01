@@ -7,10 +7,11 @@
   <div class="container w-75 mt-3 rounded shadow"  >
     <div class="row align-items-stretch">
       <div class="col-12 col-md-6 offset-md-3">
-        <h3 class="fe-bold text-center py-5">Contáctanos</h3>
+        <br>
         <form action="" class="formulario contacto" method="post">
           <div class="card">
             <div class="card-body">
+              <h3 class="fe-bold text-center py-5">Contáctanos</h3>
           {% csrf_token %}
     {{form | crispy }}
     <br>

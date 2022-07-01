@@ -8,7 +8,7 @@ urlpatterns = [
     path('comunidad/', comunidad, name="comunidad"),
     path('agregar/', agregar, name="agregar"),
     path('respuesta/', respuesta, name="respuesta"),
-    path('editar/', editar, name="editar"),
+    path('editar/<id>/', editar, name="editar"),
     path('eliminar/', eliminar, name="eliminar"),
     
 

@@ -3,7 +3,7 @@
 {% load static %}
 <div class="container w-75 mt-3 rounded shadow p-5">
     <div class="row row-cols-1 row-cols-md-3 g-2">
-       {% for p in foto %}
+       {% for p in fotos %}
       <div class ="col">
           <div class="card"  id="cont_img">
             <img src="{{p.imagen.url}}" class="card-img-top" alt="galeria" />
@@ -11,19 +11,19 @@
                  <h6 class="card-title">{{ p.nombre | capfirst }}</h6>
                  <p class="card-text">{{ p.descripcion }}</p>
                  <h6>{{p.fecha}}</h6>
+                 <button type="submit" id="btnEnviar" class="btn btn-sm">
+                  <a class="nav-link active" aria-current="page" href="{% url 'editar' p.id %}">Editar</a>
+                </button>
               </div>
           </div>
       </div>
         {% endfor %}
         <div class="card">
-         <br>
           <button type="submit" id="btnEnviar" class="btn btn-primary">
             <a class="nav-link active" aria-current="page" href="{% url 'agregar' %}">agregar</a>
           </button>
           <hr>
-          <button type="submit" id="btnEnviar" class="btn btn-primary">
-            <a class="nav-link active" aria-current="page" href="{% url 'editar' %}">Editar</a>
-          </button>
+          
           <hr>
           <button type="submit" id="btnEnviar" class="btn btn-primary">
             <a class="nav-link active" aria-current="page" href="{% url 'eliminar' %}">eliminar</a>

@@ -10,17 +10,15 @@
         <br>
         <form action="" method="post" enctype="multipart/form-data">
           <div class="card">
-            <h3 class="fe-bold text-center py-5">Editar Foto</h3>
             <div class="card-body">
+              <h3 class="fe-bold text-center py-5">Editar Foto</h3>
           {% csrf_token %}
     {{form | crispy }}
-    <br>
-    {{mensaje}}
     <br>
      <div class="d-flex juxtify-content-end">
             <input type="reset" value="cancelar" class="btn btn-secondary">
             &nbsp;
-            <button type="submit" id="btnEnviar" class="btn btn-primary">editar</button>
+            <button type="submit"  class="btn btn-primary">Enviar</button>
           </div>
         </div>
       </div>
