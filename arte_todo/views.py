@@ -36,6 +36,25 @@ def contacto(request):
  
     return render(request,'arte_todo/contacto.html', data)
 
+def Editar(request, id):
+    
+      Fotos = get_object_or_404(foto, id=id)
+     
+      data = {
+         'form': fotoForm(instance=Fotos)
+      }
+     
+      if request.method == 'post':
+          formulario = fotoForm(data=request.POST,instance=Fotos, files=request.FILES)
+          if formulario.is_valid():
+               formulario.save()
+               data["mensaje"] = "guardado"  
+          data["form"] = formulario
+          data["mensaje"] = " no guardado"  
+          
+
+      return render(request,'arte_todo/editar.html', data)
+
 def agregar(request):
     
      data = {
@@ -52,22 +71,11 @@ def agregar(request):
                
      return render(request,'arte_todo/agregar.html', data)
 
-def editar(request, id):
-    
-      Fotos = get_object_or_404(foto, id=id)
-     
-      data = {
-         'form': fotoForm(instance=Fotos)
-      }
-     
-      if request.method == 'post':
-          formulario = fotoForm(data=request.POST,instance=Fotos, files=request.FILES)
-          if formulario.is_valid():
-               formulario.save()
-               return redirect(to='galeria')    
-          data["form"] = formulario
-      return render(request,'arte_todo/editar.html', data)
 
-def eliminar(request):
-     return render(request,'arte_todo/eliminar.html')
+
+def eliminar(request, id):
+    fotoss = get_object_or_404(foto, id=id)
+    fotoss.delete()
+    return redirect(to="galeria")
+
 

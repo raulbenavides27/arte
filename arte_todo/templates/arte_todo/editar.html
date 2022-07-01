@@ -14,6 +14,7 @@
               <h3 class="fe-bold text-center py-5">Editar Foto</h3>
           {% csrf_token %}
     {{form | crispy }}
+   
     <br>
      <div class="d-flex juxtify-content-end">
             <input type="reset" value="cancelar" class="btn btn-secondary">
@@ -23,6 +24,7 @@
         </div>
       </div>
         </form>
+        {{mensaje}}
         <img class="rounded mx-auto d-block p-5" src="{% static 'arte_todo/images/logo.png'%}">
       </div>
     </div>

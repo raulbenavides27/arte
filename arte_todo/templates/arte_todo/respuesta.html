@@ -9,16 +9,11 @@
       <div class="col-12 col-md-6 offset-md-3">
         <h3 class="fe-bold text-center py-5">Contáctanos</h3>
           <div class="card">
-            <div class="card-body">
-            <h4> mensaje enviado, Gracias por contactanos</H4>
-     <div class="d-flex juxtify-content-end">
-            <input type="submit" value="salir" class="btn btn-secondary">
-            &nbsp;
-            <button type="submit" id="btnEnviar" class="btn btn-primary">
-              <a class="nav-link active" aria-current="page" href="{% url 'contacto' %}">Aceptar</a>
-            </button>
-          </div>
-        </div>
+            <h4 class="fe-bold text-center py-5"> mensaje enviado, Gracias por contactanos</H4>
+              <button type="submit" id="btnEnviar" class="btn btn-primary">
+                <a class="nav-link active" aria-current="page" href="{% url 'contacto' %}">Aceptar</a>
+              </button>
+              
       </div>
         </form>
         <img class="rounded mx-auto d-block p-5" src="{% static 'arte_todo/images/logo.png'%}">

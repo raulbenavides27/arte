@@ -11,24 +11,23 @@
                  <h6 class="card-title">{{ p.nombre | capfirst }}</h6>
                  <p class="card-text">{{ p.descripcion }}</p>
                  <h6>{{p.fecha}}</h6>
-                 <button type="submit" id="btnEnviar" class="btn btn-sm">
-                  <a class="nav-link active" aria-current="page" href="{% url 'editar' p.id %}">Editar</a>
-                </button>
+                 <button type="submit" id="btnEnviar" class="btn btn-primary btn-sm">
+                  <a class="nav-link active" aria-current="page"  href="{% url 'editar' p.id %}">Editar</a>
+                  </button>
+                  <button type="submit" id="btnEnviar" class="btn btn-danger btn-sm">
+                    <a class="nav-link active" aria-current="page" href="{% url 'eliminar' p.id %}">eliminar</a>
+                  </button>
+      
               </div>
           </div>
       </div>
-        {% endfor %}
-        <div class="card">
-          <button type="submit" id="btnEnviar" class="btn btn-primary">
-            <a class="nav-link active" aria-current="page" href="{% url 'agregar' %}">agregar</a>
-          </button>
-          <hr>
-          
-          <hr>
-          <button type="submit" id="btnEnviar" class="btn btn-primary">
-            <a class="nav-link active" aria-current="page" href="{% url 'eliminar' %}">eliminar</a>
-          </button>
-        </div>
+        {% endfor %}   
+        <div class="row row-cols-1 row-cols-md-3 g-2  ">
+          <a class="nav-link active "  aria-current="page" href="{% url 'agregar' %}">
+            <h4>Agregar</h4> 
+          <img class="card-img-top" src="{% static 'arte_todo/images/agregar1.webp'%}">
+        </a>
+      </div>
     </div>
 </div>
 {% block js %}
