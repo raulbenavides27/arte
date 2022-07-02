@@ -56,7 +56,6 @@ def Editar(request, id):
       return render(request,'arte_todo/editar.html', data)
 
 def agregar(request):
-    
      data = {
          'form':fotoForm
      }

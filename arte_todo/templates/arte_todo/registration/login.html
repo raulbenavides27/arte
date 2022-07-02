@@ -7,12 +7,21 @@
          <meta http-equiv="X-UA-compatible" content="ie=edge">
          <title>ingreso al sistema</title>
         </head> 
-        <body>
-            <div class="container">
+          <body>
+             <div class="container w-75 mt-3 rounded shadow"  >
                  <div class="row">
                      <div class="col-12 col-md-6 offset-md-3">
-                         
                          <div class="card">
+                            <div class="card-body">
+                           <h2>Ingresa tus credenciales</h2>
+                           <hr>
+                           <form action="" method="post">
+                              
+                              {% csrf_token %}
+                              {{ form}}
+                            <input type="submit" value="ingresar">
+                           </form>
+                         </div>
                              </div>
                          </div> 
                      </div>

@@ -26,11 +26,16 @@ SECRET_KEY = 'django-insecure-jolwu82%x+)-0)j4dh1j76j&!uh#1w13+2(5921r#86mjgea05
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
+ 
+MESSAGE_STORAGE = "django.contrib.messages.storage.cookie.CookieStorage"
 
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 # Application definition
 
 INSTALLED_APPS = [
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
