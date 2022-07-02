@@ -34,19 +34,32 @@
             <a class="nav-link active" aria-current="page" href="{% url 'galeria' %}">Galeria</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
+            <a class="nav-link active" aria-current="page" href="{% url 'contacto' %}">Contacto</a>
           </li>
-          <li class="nav-item dropdown">
+          <li  class="nav-item">
             <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               Comunidad
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="{% url 'comunidad' %}">Usuarios</a></li>
+              <li><a class="dropdown-item" href="#">Usuarios</a></li>
               <li><a class="dropdown-item" href="#">comparte</a></li>
               <li><a class="dropdown-item" href="#">Comenta</a></li>
             </ul>
           </li>
+ {% if user.is_authenticated %}
+<li class="nav-item">
+  <a class="nav-link active" aria-current="page"href="{% url 'logout' %}">Cerrar Sesión</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link active" aria-current="page" href="#">@{{user.username}}</a>
+</li>
+{% else %}
+<li class="nav-item">
+  <a class="nav-link active" aria-current="page" href="{% url 'login' %}">Iniciar Sesión</a>
+</li>
+{%endif%}
+
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
@@ -61,7 +74,7 @@
         <div class="iconos">
           <a href="https://www.instagram.com/"><img src="{% static 'arte_todo/images/instagram-removebg.png' %}" alt="insta"></a>
         </div>
-        {}
+      
       </div>
     </div>
   </nav>
