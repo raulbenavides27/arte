@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background-image: url(../images/bg4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+#contlogo {
+    margin: auto;
+    width: 20%;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.iconos {
+    padding: 2%;
+}
+.iconos img {
+    width: 30px;
+}
+.container{
+    background-color: rgb(245, 225, 225,0.7);
+   
+}
+
+.contenido{
+   margin: auto;
+   width: 80%;
+   padding-top: 2%;
+   padding: 5%;
+}
+.contenedor2 img{
+opacity: 0;
+transform: scale(0.9);
+transition: .7s ease-in-out all;
+}
+.contenedor2 img.visible {
+    opacity: 1;
+    transform: scale(1);
+    }
+    
+
+

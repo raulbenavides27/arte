@@ -1,0 +1,36 @@
+{% extends 'arte_todo/base.html' %}
+
+{% block contenido %}
+{% load crispy_forms_tags %}
+{% load static %}
+  <!--contenido debajo del menu-->
+  <div class="container w-75 mt-3 rounded shadow"  >
+    <div class="row align-items-stretch">
+      <div class="col-12 col-md-6 offset-md-3">
+        <h3 class="fe-bold text-center py-5">Agregar Foto</h3>
+        <form action="" method="post" enctype="multipart/form-data">
+          <div class="card">
+            <div class="card-body">
+          {% csrf_token %}
+    {{form | crispy }}
+    <br>
+    {{mensaje}}
+    <br>
+     <div class="d-flex juxtify-content-end">
+            <input type="reset" value="cancelar" class="btn btn-secondary">
+            &nbsp;
+            <button type="submit" id="btnEnviar" class="btn btn-primary">Enviar</button>
+          </div>
+        </div>
+      </div>
+        </form>
+        <img class="rounded mx-auto d-block p-5" src="{% static 'arte_todo/images/logo.png'%}">
+      </div>
+    </div>
+    </div>
+  </div>
+  {% block js %}
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+     {% endblock js%}
+  {% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'arte_todo/base.html' %}
+
+{% block contenido %}
+
+{% load static %}
+  <!--contenido debajo del menu-->
+  <div class="container w-75 mt-3 rounded shadow"  >
+    <div class="row align-items-stretch">
+      <div class="col-12 col-md-6 offset-md-3">
+        <h3 class="fe-bold text-center py-5">Contáctanos</h3>
+          <div class="card">
+            <h4 class="fe-bold text-center py-5"> mensaje enviado, Gracias por contactanos</H4>
+              <button type="submit" id="btnEnviar" class="btn btn-primary">
+                <a class="nav-link active" aria-current="page" href="{% url 'contacto' %}">Aceptar</a>
+              </button>
+              
+      </div>
+        </form>
+        <img class="rounded mx-auto d-block p-5" src="{% static 'arte_todo/images/logo.png'%}">
+        <h6 class="text-md-end m-4"> Raul benavides (Lider de proyecto), contacto@grupo8.cl (02)23630654</h6>
+        <h6 class="text-md-end m-4"> Ayelen Corrotea (Diseño y estetica), contacto@grupo8.cl (02)23630654</h6>
+        <h6 class="text-md-end m-4"> Jhonandrew Rojas (Funcionalidades), contacto@grupo8.cl (02)23630654</h6>
+      </div>
+    </div>
+    </div>
+  </div>
+  {% block js %}
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+     {% endblock js%}
+  {% endblock %}
