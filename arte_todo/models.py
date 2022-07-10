@@ -13,6 +13,7 @@ class foto(models.Model):
     def __str__(self):
         return self.nombre
 class consulta(models.Model):
+    nombre = models.CharField(max_length=50)
     asunto = models.CharField(max_length=50)
     correo = models.EmailField()
     contacto= models.IntegerField()

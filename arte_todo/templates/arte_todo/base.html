@@ -57,8 +57,9 @@
                    </a>
                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                      {% if user.is_authenticated %}
+                     <li ><h4 class="dropdown-item">@{{user.username}}</h4></li>
                      <li><a class="dropdown-item"  aria-current="page"href="{% url 'logout' %}">Cerrar Sesión</a></li>
-                     <li ><a class="dropdown-item"  aria-current="page" href="#">@{{user.username}}</a></li>
+                    
                      {% else %}
                      <li ><a class="dropdown-item"  aria-current="page" href="{% url 'login' %}">Iniciar Sesión</a></li>
                      {%endif%}
