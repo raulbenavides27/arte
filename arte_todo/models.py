@@ -12,9 +12,16 @@ class foto(models.Model):
      
     def __str__(self):
         return self.nombre
+    
+    
+opciones_asunto=[
+        [0,"consulta"],
+        [1,"reclamo"],
+        [2,"sugerencia"],
+]
 class consulta(models.Model):
     nombre = models.CharField(max_length=50)
-    asunto = models.CharField(max_length=50)
+    asunto = models.IntegerField(choices=opciones_asunto)
     correo = models.EmailField()
     contacto= models.IntegerField()
     mensaje = models.TextField()
