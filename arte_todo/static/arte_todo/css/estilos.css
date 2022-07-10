@@ -12,7 +12,7 @@ body{
     background-position: center;
     background-attachment: fixed;
 }
-#contlogo {
+.contlogo {
     margin: auto;
     width: 20%;
 }

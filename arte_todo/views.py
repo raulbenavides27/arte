@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import foto
 from .forms import consultaForm , fotoForm
+from django.contrib import messages
 
 # Create your views here.
 def home(request):
@@ -48,6 +49,7 @@ def editar(request, id):
           formulario = fotoForm(data=request.POST, instance=Fotos, files=request.FILES)
           if formulario.is_valid():
                formulario.save()
+               messages.success(request, "modificado correctamente")
                return redirect(to="editar") 
           data["form"] = formulario
           
