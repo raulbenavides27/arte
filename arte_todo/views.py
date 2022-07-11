@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import foto
-from .forms import consultaForm , fotoForm
+from .forms import consultaForm ,fotoForm
 from django.contrib import messages
 
 # Create your views here.
@@ -38,21 +38,6 @@ def contacto(request):
  
     return render(request,'arte_todo/contacto.html', data)
 
-def agregar(request):
-     data = {
-         'form':fotoForm
-     }
-
-     if request.method == 'POST':
-          formulario = fotoForm(data=request.POST,files=request.FILES)
-          if formulario.is_valid():
-               formulario.save()
-               return redirect(to='galeria')    
-          else:
-              data["form"] = formulario 
-               
-     return render(request,'arte_todo/agregar.html', data)
-
 def editar(request, id):
     
       Fotos = get_object_or_404(foto, id=id)
@@ -74,5 +59,20 @@ def eliminar(request, id):
     fotoss.delete()
     messages.success(request, "Foto eliminada")
     return redirect(to="galeria")
+
+
+def agregar(request):
+    data = {
+         'form':fotoForm
+     } 
+    if request.method == 'POST':
+          formulario = fotoForm(data=request.POST,files=request.FILES)
+          if formulario.is_valid():
+               formulario.save()
+               return redirect(to='galeria')    
+          else:
+              data["form"] = formulario 
+               
+    return render(request,'arte_todo/agregar.html', data)
 
 
