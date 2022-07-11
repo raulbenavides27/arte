@@ -1,4 +1,26 @@
 {% extends 'arte_todo/base.html' %} 
+{% block js  %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script>
+  function eliminarfoto(id){
+    Swal.fire({
+      "title":"¿estas seguro?",
+      "text":"esta accion no es reversible",
+      "icon":"question",
+      "showCancelButton":true,
+      "cancelButtonText":"No, Cancelar",
+      "confirmButtontext":"Si, Eliminar",
+      "reverseButtons":true,
+      "confirmButtonsColor":"#dc3545"
+ })
+ .then(function(result){
+      if(result.isConfirmed){
+        window.location.href ="/eliminar/"+id+"/"
+      }
+ })
+}
+</script>
+{% endblock  %}
 {% block contenido %} 
 {% load static %}
     <div class="row row-cols-1 row-cols-md-3 g-2">
@@ -14,7 +36,7 @@
                   <a class="nav-link active" aria-current="page"  href="{% url 'editar' p.id %}">Editar</a>
                   </button>
                   <button type="submit" id="btnEnviar" class="btn btn-danger btn-sm">
-                    <a class="nav-link active" aria-current="page" href="{% url 'eliminar' p.id %}">eliminar</a>
+                    <a class="nav-link active" aria-current="page" href="#" onclick="eliminarfoto({{p.id}})">eliminar</a>
                   </button>
       
               </div>
@@ -28,7 +50,7 @@
         </a>
       </div>
     </div>
-{% block js %}
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-{% endblock js %}
+
+
+
 {% endblock %}

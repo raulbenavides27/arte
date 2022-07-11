@@ -11,7 +11,7 @@
               <div class="card-body">
                  <h4 class="fe-bold text-center">Nueva Foto</h4>
                  <hr>
-                      <form action="" class="formulario contacto" method="post"  enctype="multipart/form_data">
+                      <form action="" class="formulario contacto" method="post" enctype="multipart/form-data">
                      {% csrf_token %}
                      {{form | crispy }}
                       <br>
