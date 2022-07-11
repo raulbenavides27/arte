@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import foto
-from .forms import consultaForm , fotoForm
+from .forms import consultaForm ,fotoForm
+from django.contrib import messages
 
 # Create your views here.
 def home(request):
@@ -30,29 +31,12 @@ def contacto(request):
           formulario = consultaForm(data=request.POST)
           if formulario.is_valid():
               formulario.save() 
-              return redirect(to='respuesta') 
+              messages.success(request, "Mensaje Enviado")
+              return redirect(to='contacto') 
           else:
                data["form"] = formulario
  
     return render(request,'arte_todo/contacto.html', data)
-
-def editar(request, id):
-    
-      Fotos = get_object_or_404(foto, id=id)
-     
-      data = {
-         'form': fotoForm(instance=Fotos)
-      }
-     
-      if request.method == 'post':
-          formulario = fotoForm(data=request.POST, instance=Fotos, files=request.FILES)
-          if formulario.is_valid():
-               formulario.save()
-               return redirect(to="editar") 
-          data["form"] = formulario
-          
-
-      return render(request,'arte_todo/editar.html', data)
 
 def agregar(request):
      data = {
@@ -63,12 +47,13 @@ def agregar(request):
           formulario = fotoForm(data=request.POST,files=request.FILES)
           if formulario.is_valid():
                formulario.save()
+               messages.success(request, "Foto Agregada")
                return redirect(to='galeria')    
           else:
               data["form"] = formulario 
                
      return render(request,'arte_todo/agregar.html', data)
- 
+
 def editar(request, id):
     
       Fotos = get_object_or_404(foto, id=id)
@@ -80,6 +65,7 @@ def editar(request, id):
           formulario = fotoForm(data=request.POST,instance=Fotos, files=request.FILES)
           if formulario.is_valid():
                formulario.save()
+               messages.success(request, "Foto editada")
                return redirect(to='galeria')  
           data["form"] = formulario
       return render(request,'arte_todo/editar.html', data)
@@ -87,6 +73,7 @@ def editar(request, id):
 def eliminar(request, id):
     fotoss = get_object_or_404(foto, id=id)
     fotoss.delete()
+    messages.success(request, "Foto eliminada")
     return redirect(to="galeria")
 
 

@@ -12,13 +12,27 @@ body{
     background-position: center;
     background-attachment: fixed;
 }
-
-
+.contlogo {
+    margin: auto;
+    width: 20%;
+}
+.card-img-top{
+    margin: auto;
+    max-height: 280px;
+}
+#cont_agregar{
+   
+    margin: auto;
+    max-height: 150px;
+    max-width: 100px;
+    border-radius: 5%;
+    background-color: rgb(207, 159, 194);
+  
+}
 .logo img {
     width: 100%;
     height: 100%;
 }
-
 .iconos img {
     width: 30px;
 

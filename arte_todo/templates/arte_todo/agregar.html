@@ -3,7 +3,7 @@
 {% load crispy_forms_tags %}
 {% load static %}
   <!--contenido debajo del menu-->
-  <div class="container w-75 mt-3 rounded shadow"  >
+
     <br>
     <div class="col-12 col-md-6 offset-md-3">
        <div class="row align-items-stretch">
@@ -11,7 +11,7 @@
               <div class="card-body">
                  <h4 class="fe-bold text-center">Nueva Foto</h4>
                  <hr>
-                      <form action="" class="formulario contacto" method="post">
+                      <form action="" class="formulario contacto" method="post" enctype="multipart/form-data">
                      {% csrf_token %}
                      {{form | crispy }}
                       <br>
@@ -30,7 +30,7 @@
 
       <br>         
     </div>
-</div>
+
 {% block js %}
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
