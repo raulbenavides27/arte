@@ -52,7 +52,7 @@ def agregar(request):
               data["form"] = formulario 
                
      return render(request,'arte_todo/agregar.html', data)
- 
+
 def editar(request, id):
     
       Fotos = get_object_or_404(foto, id=id)
