@@ -31,7 +31,8 @@ def contacto(request):
           formulario = consultaForm(data=request.POST)
           if formulario.is_valid():
               formulario.save() 
-              return redirect(to='respuesta') 
+              messages.success(request, "Consulta Agregada")
+              return redirect(to='contacto') 
           else:
                data["form"] = formulario
  
@@ -71,6 +72,7 @@ def editar(request, id):
 def eliminar(request, id):
     fotoss = get_object_or_404(foto, id=id)
     fotoss.delete()
+    messages.success(request, "Foto eliminada")
     return redirect(to="galeria")
 
 

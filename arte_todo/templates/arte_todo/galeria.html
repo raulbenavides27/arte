@@ -1,7 +1,6 @@
 {% extends 'arte_todo/base.html' %} 
 {% block contenido %} 
 {% load static %}
-<div class="container w-75 mt-3 rounded shadow p-5">
     <div class="row row-cols-1 row-cols-md-3 g-2">
        {% for p in fotos %}
       <div class ="col">
@@ -29,7 +28,6 @@
         </a>
       </div>
     </div>
-</div>
 {% block js %}
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 {% endblock js %}
