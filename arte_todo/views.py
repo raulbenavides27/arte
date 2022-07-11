@@ -60,12 +60,12 @@ def eliminar(request, id):
     messages.success(request, "Foto eliminada")
     return redirect(to="galeria")
 
-
 def agregar(request):
-    data = {
+     data = {
          'form':fotoForm
-     } 
-    if request.method == 'POST':
+     }
+
+     if request.method == 'POST':
           formulario = fotoForm(data=request.POST,files=request.FILES)
           if formulario.is_valid():
                formulario.save()
@@ -73,6 +73,5 @@ def agregar(request):
           else:
               data["form"] = formulario 
                
-    return render(request,'arte_todo/agregar.html', data)
-
+     return render(request,'arte_todo/agregar.html', data)
 
