@@ -31,7 +31,7 @@ def contacto(request):
           formulario = consultaForm(data=request.POST)
           if formulario.is_valid():
               formulario.save() 
-              messages.success(request, "Consulta Agregada")
+              messages.success(request, "Mensaje Enviado")
               return redirect(to='contacto') 
           else:
                data["form"] = formulario

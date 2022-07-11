@@ -20,7 +20,6 @@ opciones_asunto=[
         [2,"sugerencia"],
 ]
 class consulta(models.Model):
-    nombre = models.CharField(max_length=50)
     asunto = models.IntegerField(choices=opciones_asunto)
     correo = models.EmailField()
     contacto= models.IntegerField()
@@ -28,4 +27,5 @@ class consulta(models.Model):
     
     
     def __str__(self):
-        return self.asunto   
+        
+        return self.correo
