@@ -5,7 +5,7 @@ class fotoSerializer(serializers.ModelSerializer):
     
     def validate_nombre(self, value):
         
-        existe = foto.objects.filter(nombre=value).exists()
+        existe = foto.objects.filter(nombre__iexact=value).exists()
         if existe:
             raise serializers.ValidationError("este nombre ya esta uso")
         return value
