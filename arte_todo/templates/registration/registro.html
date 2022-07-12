@@ -23,10 +23,10 @@
                         <hr>
                            {% csrf_token %}
                            {{ form  | crispy}}
+                           <input type="submit" value="Registrate" class="btn btn-success float_center">
+                           <hr>
+                           <h5>¿Ya tienes cuenta?</h5>
                            <a href="{% url 'login'%}">Iniciar seccion</a>
-                           <br>
-                         <input type="submit" value="Ingresar" class="btn btn-success float_center">
-                      
                        </form>
              
                      </div>
