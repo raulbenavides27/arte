@@ -3,6 +3,14 @@ from .models import foto
 from .forms import consultaForm ,fotoForm, customUserCreationForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
+from rest_framework import viewsets
+from .serializers import fotoSerializer
+
+class fotoViewset(viewsets.ModelViewSet):
+    queryset = foto.objects.all()
+    serializer_class = fotoSerializer
+
 
 # Create your views here.
 def home(request):

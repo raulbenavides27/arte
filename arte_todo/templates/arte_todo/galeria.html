@@ -1,50 +1,31 @@
 {% extends 'arte_todo/base.html' %} 
-{% block js  %}
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-  function eliminarfoto(id){
-    Swal.fire({
-      "title":"¿estas seguro?",
-      "text":"esta accion no es reversible",
-      "icon":"question",
-      "showCancelButton":true,
-      "cancelButtonText":"No, Cancelar",
-      "confirmButtontext":"Si, Eliminar",
-      "reverseButtons":true,
-      "confirmButtonsColor":"#dc3545"
- })
- .then(function(result){
-      if(result.isConfirmed){
-        window.location.href ="/eliminar/"+id+"/"
-      }
- })
-}
-</script>
-{% endblock  %}
-{% block contenido %} 
 {% load static %}
+
+{% block contenido %} 
     <div class="row row-cols-1 row-cols-md-3 g-2">
        {% for p in fotos %}
       <div class ="col">
           <div class="card"  id="cont_img">
-                    <img src="{{p.imagen.url}}" class="card-img-top" alt="galeria"/>   
-                     {% if user.is_authenticated %}
-                     <div class="card-body" id="detalle_img">
-                     <h6 class="card-title">{{ p.nombre | capfirst }}</h6>
+            <img src="{{p.imagen.url}}" class="card-img-top" alt="galeria"/>   
+            <div class="card-body" id="#detalle_img">   
+            {% if user.is_authenticated %}
+                    <h6 class="card-title">{{ p.nombre | capfirst }}</h6>
                      <p class="card-text">{{ p.descripcion }}</p>
-                     <h6>{{p.fecha}}</h6>
+                     <h7>{{p.fecha}}</h7>
+                     <hr>
                          <button type="submit" id="btnEnviar" class="btn btn-primary btn-sm">
                           <a class="nav-link active" aria-current="page"  href="{% url 'editar' p.id %}">Editar</a>
                           </button>
                           <button type="submit" id="btnEnviar" class="btn btn-danger btn-sm">
                             <a class="nav-link active" aria-current="page" href="#" onclick="eliminarfoto({{p.id}})">eliminar</a>
                           </button>
-                      </div>
+                     
                      {% else %}
-                     <h5 class="fe-bold text-center">Inicie seccion o registrese para ver opciones</h5>
+                     <h6 class="fe-bold text-center">Inicie seccion o registrese para ver opciones</h6>
                      <a class="item"   href="{% url 'login' %}">Iniciar Sesión</a>
                      <a class="item"  aria-current="page" href="{% url 'registro' %}">Registrate</a>
-                     {%endif%}            
+                     {%endif%} 
+                </div>           
           </div>
       </div>
         {% endfor %} 
@@ -62,6 +43,28 @@
        
      
     </div>
-    
-
+   
+    {% block js  %}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'arte_todo/js/form.js'%}"></script>
+    <script>
+      function eliminarfoto(id){
+        Swal.fire({
+          "title":"¿estas seguro?",
+          "text":"esta accion no es reversible",
+          "icon":"question",
+          "showCancelButton":true,
+          "cancelButtonText":"No, Cancelar",
+          "confirmButtontext":"Si, Eliminar",
+          "reverseButtons":true,
+          "confirmButtonsColor":"#dc3545"
+     })
+     .then(function(result){
+          if(result.isConfirmed){
+            window.location.href ="/eliminar/"+id+"/"
+          }
+     })
+    }
+    </script>
+    {% endblock  %}
   {% endblock %}

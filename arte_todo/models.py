@@ -4,6 +4,7 @@ from turtle import update
 from django.db import models
 
 # Create your models here.
+
 class foto(models.Model):
     nombre = models.CharField(max_length=50)
     descripcion = models.TextField()
