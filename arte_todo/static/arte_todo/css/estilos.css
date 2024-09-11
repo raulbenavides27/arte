@@ -6,71 +6,109 @@
 }
 
 body {
-    background-image: url(../images/bg4.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-color: #f0f0f0; /* Color de fondo de respaldo */
+    filter: brightness(0.7); /* Reducir el brillo de la imagen de fondo */
 }
 
+/* Estilos del logo */
 .contlogo {
     margin: auto;
-    width: 20%;
+    width: 10%; /* Ajusta el tamaño del contenedor del logo */
 }
 
-.card-img-top {
-    margin: auto;
-    max-height: 280px;
+.logo-img {
+    width: 50%; /* Ajusta el tamaño de la imagen del logo */
+    height: auto; /* Mantiene la proporción original de la imagen */
 }
 
-#cont_agregar {
-    margin: auto;
-    max-height: 150px;
-    max-width: 100px;
-    border-radius: 5%;
-    background-color: rgb(207, 159, 194);
+/* Estilos para la barra de navegación */
+.navbar {
+    background-color: #f3ae19; /* Azul oscuro */
+    padding: 10px; /* Ajusta el relleno según sea necesario */
 }
 
-.logo img {
-    width: 100%;
-    height: 100%;
+.navbar-brand img {
+    width: 50%; /* Ajusta el tamaño de la imagen del logo */
+    height: auto; /* Mantiene la proporción original de la imagen */
+}
+
+.navbar-nav .nav-link {
+    color: #FFCC00; /* Amarillo para los enlaces de navegación */
+}
+
+.navbar-nav .nav-link.active {
+    color: #FFFFFF; /* Blanco para el enlace activo */
 }
 
 .iconos img {
-    width: 30px;
+    width: 30px; /* Tamaño de los iconos sociales */
 }
 
-#usuario {
-    list-style: none;
-}
-
+/* Fondo de la página y colores */
 .container {
-    background-color: rgba(245, 225, 225, 0.7); /* Corrección del valor para opacidad */
+    background-color: rgba(245, 225, 225, 0.7); /* Fondo con opacidad */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Colores de acento */
+.primary-yellow {
+    color: #FFCC00; /* Amarillo */
+}
+
+.primary-blue {
+    color: #003366; /* Azul oscuro */
+}
+
+.primary-red {
+    color: #990000; /* Rojo oscuro */
+}
+
+/* Fondos y bordes */
+.bg-yellow {
+    background-color: #FFCC00; /* Amarillo */
+}
+
+.bg-blue {
+    background-color: #003366; /* Azul oscuro */
+}
+
+.bg-red {
+    background-color: #990000; /* Rojo oscuro */
+}
+
+/* Aplicación de colores */
+.header {
+    background-color: #003366; /* Azul oscuro para el encabezado */
+    color: #FFFFFF; /* Blanco para el texto */
+    padding: 10px;
+}
+
+.button {
+    background-color: #FFCC00; /* Amarillo para los botones */
+    color: #003366; /* Azul oscuro para el texto del botón */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer {
+    background-color: #990000; /* Rojo oscuro para el pie de página */
+    color: #FFFFFF; /* Blanco para el texto del pie de página */
+    padding: 10px;
+}
+
+/* Contenedor con acento amarillo */
+.container-accent-yellow {
+    background-color: rgba(255, 204, 0, 0.5); /* Amarillo con opacidad */
 }
 
 .contenido {
     margin: auto;
     width: 80%;
-    padding: 2% 5%; /* Ajuste del relleno para mejor centralización */
-}
-
-.contenedor2 img {
-    opacity: 0;
-    transform: scale(0.9);
-    transition: .7s ease-in-out all;
-    width: 100%; /* Mantiene el ancho completo */
-    height: 400px; /* Ajusta la altura según tu necesidad */
-    object-fit: cover; /* Para mantener la proporción sin deformación */
-}
-
-.contenedor2 img.visible {
-    opacity: 1;
-    transform: scale(1);
-}
-
-.carousel-item img {
-    width: 100%;
-    height: 300px; /* Ajusta la altura que necesites */
-    object-fit: cover; /* Mantiene la proporción de la imagen */
+    padding: 2% 5%;
 }
